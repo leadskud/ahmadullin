@@ -104,6 +104,21 @@
   @media(max-width:760px){.stickycta{display:flex}}
   .skip{position:absolute;left:-9999px;top:0;z-index:50;background:var(--accent-d);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;text-decoration:none;font-weight:700;font-size:14px}
   .skip:focus{left:0}
+
+  /* mobile-CRO (2026-06-12): компактный hero-CTA выше длинного dek на мобайле */
+  @media(max-width:760px){
+    .wrap.hero{display:flex;flex-direction:column}
+    .wrap.hero > *{order:5}
+    .wrap.hero .kicker{order:1}
+    .wrap.hero h1{order:2}
+    .wrap.hero .giftcard{order:3}
+    .wrap.hero .herocta{order:4;margin:14px 0 6px}
+    .wrap.hero .dek{order:6}
+    .wrap.hero .microtrust{order:7}
+    .wrap.hero .byline{order:8}
+    .wrap.hero .herocta .btn.ghost{display:none}
+    .wrap.hero .herocta .btn{width:100%;text-align:center;padding:14px 22px}
+  }
 </style>
 </head>
 <body>
@@ -117,7 +132,7 @@
   </div>
 </header>
 
-<div class="wrap">
+<div class="wrap hero">
   <span class="kicker">Детское развитие · телефон и учёба · онлайн из любой страны</span>
   <h1>Ребёнок не вылезает из телефона и не может сам сесть за уроки — а вы за границей</h1>
   <p class="dek">Каждый вечер — одно и то же: телефон не отдаёт, уроки только из-под палки, а напоминания превращаются в ссору. За рубежом давить ещё и не на кого: режим школы другой, привычных кружков нет. Спокойный первый шаг — онлайн-марафон центра Шамиля Ахмадуллина: разбирают, как сократить время ребёнка в телефоне и приучить его садиться за уроки самому. На русском, из любого часового пояса.</p>
